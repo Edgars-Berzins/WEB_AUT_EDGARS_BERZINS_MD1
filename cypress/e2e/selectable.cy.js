@@ -1,4 +1,4 @@
-import selectableGridPage from "../pageObjects/selectable.page";
+import selectableGridPage from "../pageObjects/selectablePage.page";
 
 describe('Selectable', () => {
   context("Selectable grid scenarios", () => {

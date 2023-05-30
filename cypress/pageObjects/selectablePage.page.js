@@ -2,17 +2,17 @@ import BasePage from "./base.page";
 
 class selectableGridPage extends BasePage {
 
-    //visit "selectable"
+    //Visit "selectable"
     static get url() {
         return "/selectable";
     }
 
-    //select "Grid"
+    //Select "Grid"
     static get gridSelector() {
         return cy.get("#demo-tab-grid");
     }
 
-    //elements of the container
+    //Elements of the container
     static get one() {
         return cy.get('#row1 > li:nth-child(1)');
     }
@@ -41,13 +41,13 @@ class selectableGridPage extends BasePage {
         return cy.get('#row3 > li:nth-child(3)');
     }
 
-    //validate IS highlighted
-    static shouldBeHighlighted(selector) {
+    //Method -> Validation -> "selector" IS highlighted
+    static validationShouldBeHighlighted(selector) {
         return selector.should('have.class', 'active');
     }
 
-    //validate is NOT highlighted
-    static shouldNotBeHighlighted(selector) {
+    //Method -> Validation -> "selector" is NOT highlighted
+    static validationShouldNotBeHighlighted(selector) {
         return selector.should('not.have.class', 'active');
     }
 
